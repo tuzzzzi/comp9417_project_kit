@@ -1,0 +1,6 @@
+/data/nem_weather_halfhourly_2010_2026.csv
+/.venv/
+__pycache__/
+/outputs/
+/project_package/artifacts/
+/submission.zip
