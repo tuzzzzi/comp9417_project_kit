@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": [
+    "demand: all 207456 truths and both baselines match original data and official definition",
+    "price: all 207456 truths and both baselines match original data and official definition",
+    "All 1136 monthly and 96 yearly metric rows independently recomputed",
+    "Whole-day bootstrap implementation matches explicit 48-half-hour day resampling",
+    "No model parameter changes or retraining; 1000 bootstrap replicates; interval bounds finite and ordered",
+    "2014 scores reproduce supplied A/B results"
+  ],
+  "demand_prediction_ranges": {
+    "ridge": {
+      "min": 3662.4660281298347,
+      "max": 13491.085552074474,
+      "outside_0_20000": 0
+    },
+    "mlp": {
+      "min": 788.5857162454085,
+      "max": 23552.170172314723,
+      "outside_0_20000": 1
+    }
+  }
+}

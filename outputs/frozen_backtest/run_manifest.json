@@ -1,0 +1,58 @@
+{
+  "scope": "frozen models only; no adaptation or detector tuning",
+  "fit_market_days": [
+    "2010-01-08",
+    "2013-12-31"
+  ],
+  "validation_year": 2014,
+  "simulation": [
+    "2015-01-01",
+    "2026-10-31"
+  ],
+  "n_days": 4322,
+  "retrain_count": 0,
+  "all_model_hashes_unchanged": true,
+  "daily_official_checks": [
+    "2015-01-01",
+    "2016-01-01",
+    "2017-01-01",
+    "2017-05-14",
+    "2018-01-01",
+    "2019-01-01",
+    "2020-01-01",
+    "2021-01-01",
+    "2022-01-01",
+    "2023-01-01",
+    "2024-01-01",
+    "2025-01-01",
+    "2026-01-01",
+    "2026-10-31"
+  ],
+  "no_clipping": true,
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 9417,
+  "bootstrap_unit": "whole market days, exactly 48 half-hours per day",
+  "ci_interpretation": "expected monthly MAPE/accuracy under similar conditions, not prediction intervals; IID ignores dependence; daily bootstrap still assumes exchangeable independent days",
+  "note": "2026 is Jan–Oct only. Results do not prove concept drift; no strategy chosen from this run.",
+  "python": "3.11.18",
+  "sklearn": "1.9.1",
+  "numpy": "2.4.6",
+  "pandas": "3.1.0",
+  "data_sha256": "c13711002906140eaf7cc67c1ce17a49facd359cf3d1a84722aaa3ccd647752c",
+  "day_types_sha256": "d41ad9f205fd69ea33257d29f9f4dce0cfe0cd79a045d291b7ce9e0c36cceb26",
+  "source_sha256": {
+    "experiments/backtest_frozen.py": "a1ee8aeeb6eccaf49006be59e5da33c6f2c7613c11784b59cca1c8149ee3408a",
+    "experiments/stage1_data.py": "9c5613c881b07597e19513c24eb65238a6685efc6218d1add142b2c229b8a8da",
+    "experiments/demand_models.py": "35af223d9bb237f4524f117d378bf95a4eae3dcd03d7a4ae5a12e99b2ca1b373",
+    "experiments/demand_config.json": "0d7aa49e61429e39e162794bb8ae785e00812c6ec4fb4e2ec3ebc8d0cac861c7",
+    "experiments/price_models.py": "ceef9ddefc87b8123deb3cd055e054c815be85bbba40c62e895e3e2e48eecfd4"
+  },
+  "model_fitted_state_hashes": {
+    "ridge": "9cf92864ad71161762406da32dfcb528",
+    "mlp": "857c5076d1fc0e1ad5246000e0883e46",
+    "logistic": "c165afbbce9504c4ea3b636105261f66",
+    "hist_gbc": "594b1bf56ffbc70ae468d376a6ad3047"
+  },
+  "warnings": [],
+  "elapsed_seconds": 30.52267708297586
+}
