@@ -1,0 +1,73 @@
+PASS Python major/minor is 3.11
+PASS Every course-pinned dependency version matches
+PASS Released CSV has exactly the expected complete timestamp grid
+PASS Released CSV has no missing values
+PASS Training and validation have 69,792 and 17,520 rows
+PASS Only 22 finite features are used
+PASS 2015+ market days excluded from feature table
+PASS Saved prediction index equals all 2014 validation timestamps
+PASS Every prediction day has exactly 48 intervals
+PASS Saved market days use interval-start dates
+PASS Ground truth equals released NSW demand
+PASS Validation includes midnight of 2015-01-01 as 2014-12-31
+PASS yesterday predictions finite and within submission demand range
+PASS yesterday MAPE and MAE independently recomputed
+PASS yesterday baseline equals raw same-slot lag
+PASS last_week predictions finite and within submission demand range
+PASS last_week MAPE and MAE independently recomputed
+PASS last_week baseline equals raw same-slot lag
+PASS ridge predictions finite and within submission demand range
+PASS ridge MAPE and MAE independently recomputed
+PASS mlp predictions finite and within submission demand range
+PASS mlp MAPE and MAE independently recomputed
+PASS ridge saved model reproduces all saved predictions
+PASS ridge input scaler fitted on training rows only
+PASS mlp saved model reproduces all saved predictions
+PASS mlp input scaler fitted on training rows only
+PASS MLP target scaler fitted on training targets only
+PASS MLP retains seed 42 and disables automatic validation split
+PASS Daily inputs match offline inputs on 2014-01-01
+PASS Future market poisoning leaves inputs unchanged on 2014-01-01
+PASS ridge day prediction matches saved batch result on 2014-01-01
+PASS mlp day prediction matches saved batch result on 2014-01-01
+PASS Daily inputs match offline inputs on 2014-07-01
+PASS Future market poisoning leaves inputs unchanged on 2014-07-01
+PASS ridge day prediction matches saved batch result on 2014-07-01
+PASS mlp day prediction matches saved batch result on 2014-07-01
+PASS Daily inputs match offline inputs on 2014-12-31
+PASS Future market poisoning leaves inputs unchanged on 2014-12-31
+PASS ridge day prediction matches saved batch result on 2014-12-31
+PASS mlp day prediction matches saved batch result on 2014-12-31
+PASS Model factory returns independent fresh estimators
+PASS Factory Ridge hyperparameters equal the saved model
+PASS Factory MLP hyperparameters equal the saved model
+PASS Missing configuration fails explicitly instead of changing the model
+PASS Incomplete configuration fails explicitly
+PASS C handoff has four complete model series without duplicates
+PASS C handoff truth and prediction fields are finite
+PASS Seed 42 scores recomputed
+PASS Seed 0 scores recomputed
+PASS Seed 2026 scores recomputed
+PASS Ablation ridge_without_weather scores recomputed
+PASS Ablation mlp_without_weather scores recomputed
+PASS Ablation ridge_without_calendar scores recomputed
+PASS Ablation mlp_without_calendar scores recomputed
+PASS Ablation ridge_without_demand_lags scores recomputed
+PASS Ablation mlp_without_demand_lags scores recomputed
+PASS Ablation ridge_without_price_history scores recomputed
+PASS Ablation mlp_without_price_history scores recomputed
+PASS All four methods have 12 monthly estimates
+PASS Monthly chart means independently recomputed
+PASS Monthly IID intervals independently recomputed
+PASS Daily bootstrap bounds finite, ordered and based on 2000 replicates
+PASS Unchanged group validator retraining reproduces every prediction
+PASS Source CSV SHA256 matches the training run
+PASS Post-training change preserves original provenance for experiments/demand_models.py
+PASS Recorded source hash matches experiments/demand_models.py
+PASS Recorded source hash matches experiments/demand_config.json
+PASS Recorded source hash matches experiments/stage1_data.py
+PASS Recorded source hash matches experiments/validate_models.py
+PASS Recorded source hash matches experiments/run_demand_study.py
+PASS Recorded model hash matches demand_mlp_frozen.joblib
+PASS Recorded model hash matches demand_ridge_frozen.joblib
+Completed 72 checks.

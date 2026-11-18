@@ -1,0 +1,16 @@
+{
+  "demand": {
+    "status": "passed",
+    "checks_passed": 71,
+    "scope": "2014 validation and three sampled daily inference/leakage boundaries; not final live-week sandbox",
+    "full_study_retrained": false
+  },
+  "price": {
+    "status": "passed",
+    "retrained_on": "2010–2013",
+    "validated_on": 2014,
+    "saved_predictions_match": true,
+    "saved_scores_match": true
+  },
+  "shared_sources": "stage1_data.py, validate_models.py, harness/dayahead.py and requirements.txt byte-identical across repository and both packages"
+}

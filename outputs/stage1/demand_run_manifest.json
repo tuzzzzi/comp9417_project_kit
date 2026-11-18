@@ -1,0 +1,76 @@
+{
+  "python": "3.11.18 (main, Oct 26 2026, 18:15:19) [Clang 20.1.8 ]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.0",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "matplotlib": "3.11.2",
+    "threadpoolctl": "3.8.0"
+  },
+  "data_filename": "nem_weather_halfhourly_2010_2026.csv",
+  "data_sha256": "c13711002906140eaf7cc67c1ce17a49facd359cf3d1a84722aaa3ccd647752c",
+  "data_usage": "Only market days before 2015-01-01 enter fitting, selection and diagnostics",
+  "train_rows": 69792,
+  "validation_rows": 17520,
+  "feature_names": [
+    "syd_temp",
+    "syd_rh",
+    "syd_cloud",
+    "syd_solar",
+    "mel_temp",
+    "mel_rh",
+    "mel_cloud",
+    "mel_solar",
+    "bne_temp",
+    "bne_rh",
+    "bne_cloud",
+    "bne_solar",
+    "slot_sin",
+    "slot_cos",
+    "weekend",
+    "season_sin",
+    "season_cos",
+    "demand_lag1",
+    "price_lag1",
+    "demand_lag7",
+    "price_lag7",
+    "previous_price_mean"
+  ],
+  "train_first_timestamp": "2010-01-08 00:30:00",
+  "train_last_timestamp": "2014-01-01 00:00:00",
+  "validation_first_timestamp": "2014-01-01 00:30:00",
+  "validation_last_timestamp": "2015-01-01 00:00:00",
+  "thread_limit": 2,
+  "selection_seed": 42,
+  "stability_seeds": [
+    42,
+    0,
+    2026
+  ],
+  "selection_candidates": 8,
+  "refit_on_2014": false,
+  "ablation_role": "diagnostic only; shared 22-feature representation retained",
+  "seed_role": "diagnostic only; seed 42 retained rather than selecting the best seed",
+  "recommended_model": "mlp",
+  "source_sha256": {
+    "experiments/demand_models.py": "f2a656f1488fd01028f9d5037eea6aa6206f827feb71361625f843bb7da4302d",
+    "experiments/demand_config.json": "0d7aa49e61429e39e162794bb8ae785e00812c6ec4fb4e2ec3ebc8d0cac861c7",
+    "experiments/stage1_data.py": "9c5613c881b07597e19513c24eb65238a6685efc6218d1add142b2c229b8a8da",
+    "experiments/validate_models.py": "cac1254f3b35e23707c42404cc547f6e8ea611b40b4381056328b28a9040621c",
+    "experiments/run_demand_study.py": "32f6ff7ae1daa992e61b9a898553ae8c2adf6873fb5f9ac29c6b49a4279b429d"
+  },
+  "artifact_sha256": {
+    "demand_mlp_frozen.joblib": "d164d4a26192bbdc8721c3bf76f036c047131ef147980b88a1e15d12cca90dc5",
+    "demand_ridge_frozen.joblib": "03a5fd074f8a6acd9560e697733cf12497039c9ecdfc3e2e3e04a9a018d0e49a"
+  },
+  "post_training_source_changes": {
+    "experiments/demand_models.py": {
+      "prior_sha256": "f2a656f1488fd01028f9d5037eea6aa6206f827feb71361625f843bb7da4302d",
+      "sha256": "35af223d9bb237f4524f117d378bf95a4eae3dcd03d7a4ae5a12e99b2ca1b373",
+      "reason": "Added missing/incomplete configuration errors only; estimator construction with the selected configuration is unchanged."
+    }
+  }
+}

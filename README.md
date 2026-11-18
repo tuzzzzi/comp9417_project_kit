@@ -148,3 +148,23 @@ on the zip itself before uploading it.
   means no live-evaluation marks).
 
 Weather data: Open-Meteo (https://open-meteo.com), CC BY 4.0. Market data: AEMO.
+
+
+## Integrated A/B Stage 1 handoffs
+
+- A demand: `experiments/demand_models.py` and `demand_config.json` provide Ridge and MLP; fitted 2010–2013 models are in `artifacts/demand_*_frozen.joblib`.
+- B price: `experiments/price_models.py` provides Logistic Regression and HistGradientBoostingClassifier.
+- Teammate validation tables, half-hour predictions and figures are preserved in `outputs/stage1/`. Pilot/reproduction duplicates are omitted.
+- Original handoff documentation and the supplied price report are in [handoffs/](handoffs/README.md). These are supplied materials, not newly verified final report text.
+- Common data, official harness, requirements and validation entry point are retained unchanged. No course CSV or environment is uploaded.
+
+Run from the repository root with the course Python 3.11 environment:
+
+```bash
+python -m experiments.validate_models --task both --data /path/to/nem_weather_halfhourly_2010_2026.csv --output outputs/reproduction
+python -m experiments.check_demand_handoff --data /path/to/nem_weather_halfhourly_2010_2026.csv
+python -m experiments.plot_demand_results
+python -m experiments.plot_price_results
+```
+
+The demand MLP's recorded convergence warning is retained; its 300-epoch selected run must not be described as converged. These are Stage 1 results, not completed 2015–2026 simulations or a final submission package.

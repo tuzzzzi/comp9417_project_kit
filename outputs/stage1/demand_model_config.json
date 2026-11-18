@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "training_market_days": [
+    "2010-01-08",
+    "2013-12-31"
+  ],
+  "validation_market_days": [
+    "2014-01-01",
+    "2014-12-31"
+  ],
+  "selection_metric": "2014 MAPE; tie-break MAE then candidate name",
+  "ridge_alpha": 10.0,
+  "mlp_params": {
+    "activation": "relu",
+    "alpha": 0.0001,
+    "batch_size": 256,
+    "early_stopping": false,
+    "hidden_layer_sizes": [
+      64
+    ],
+    "learning_rate_init": 0.001,
+    "max_iter": 300,
+    "n_iter_no_change": 30,
+    "random_state": 42,
+    "shuffle": true,
+    "solver": "adam",
+    "tol": 1e-05
+  },
+  "selected_candidates": {
+    "ridge": "ridge_alpha_10",
+    "mlp": "mlp_64"
+  },
+  "feature_names": [
+    "syd_temp",
+    "syd_rh",
+    "syd_cloud",
+    "syd_solar",
+    "mel_temp",
+    "mel_rh",
+    "mel_cloud",
+    "mel_solar",
+    "bne_temp",
+    "bne_rh",
+    "bne_cloud",
+    "bne_solar",
+    "slot_sin",
+    "slot_cos",
+    "weekend",
+    "season_sin",
+    "season_cos",
+    "demand_lag1",
+    "price_lag1",
+    "demand_lag7",
+    "price_lag7",
+    "previous_price_mean"
+  ],
+  "recommended_model": "mlp"
+}

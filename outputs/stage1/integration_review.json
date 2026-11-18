@@ -1,0 +1,5 @@
+{
+  "change": "Fail explicitly when selected configuration is missing or incomplete; no fitted parameter changes",
+  "before_source_sha256": "f2a656f1488fd01028f9d5037eea6aa6206f827feb71361625f843bb7da4302d",
+  "after_source_sha256": "35af223d9bb237f4524f117d378bf95a4eae3dcd03d7a4ae5a12e99b2ca1b373"
+}

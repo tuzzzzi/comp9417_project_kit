@@ -1,0 +1,25 @@
+{
+  "reference": "B_price_handoff supplied by teammate; shared files identical to inspected team commit 03e535ae929344815c40a2ef778bdde3358bc001 where applicable",
+  "files": {
+    "experiments/stage1_data.py": {
+      "sha256": "9c5613c881b07597e19513c24eb65238a6685efc6218d1add142b2c229b8a8da",
+      "unchanged_from_B": true
+    },
+    "experiments/validate_models.py": {
+      "sha256": "cac1254f3b35e23707c42404cc547f6e8ea611b40b4381056328b28a9040621c",
+      "unchanged_from_B": true
+    },
+    "experiments/price_models.py": {
+      "sha256": "ceef9ddefc87b8123deb3cd055e054c815be85bbba40c62e895e3e2e48eecfd4",
+      "unchanged_from_B": true
+    },
+    "harness/dayahead.py": {
+      "sha256": "8913af39325a5fdeefa5d6a8469acd4712fc981e25192bf3545e7034da88f326",
+      "unchanged_from_B": true
+    },
+    "requirements.txt": {
+      "sha256": "3a7e13dafaa843e2c777604512e7c1d743f17ce011e17ca1809ef9b3e5b0afe5",
+      "unchanged_from_B": true
+    }
+  }
+}
