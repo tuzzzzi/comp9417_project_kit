@@ -1,0 +1,3 @@
+task,model,strategy,metric,selection_score,holdout_score,updates_by_2024,updates_by_2026_oct
+demand,mlp,periodic,MAPE,4.194387861924087,4.731326839881471,5,6
+price,hist_gbc,periodic,balanced_accuracy,70.39059303956702,80.96104587408792,5,6

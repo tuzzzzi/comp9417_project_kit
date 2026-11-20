@@ -1,0 +1,13 @@
+task,strategy,period,days,input_above_days,error_ready_days,error_above_days,both_above_days,input_above_error_below_days,input_alarms,error_alarms,first_input_alarm,first_error_alarm,budget_exhausted_alarms
+demand,drift,selection,3653,2775,3491,2371,2115,584,23,18,2015-07-27,2015-01-07,34
+demand,drift,holdout,669,669,669,669,669,0,0,0,,,0
+demand,drift,all,4322,3444,4160,3040,2784,584,23,18,2015-07-27,2015-01-07,34
+demand,frozen,selection,3653,2775,3653,2445,2132,643,23,19,2015-07-27,2015-01-07,0
+demand,frozen,holdout,669,669,669,669,669,0,0,0,,,0
+demand,frozen,all,4322,3444,4322,3114,2801,643,23,19,2015-07-27,2015-01-07,0
+price,drift,selection,3653,2775,3491,2711,2190,501,23,21,2015-07-27,2015-01-07,38
+price,drift,holdout,669,669,669,669,669,0,0,0,,,0
+price,drift,all,4322,3444,4160,3380,2859,501,23,21,2015-07-27,2015-01-07,38
+price,frozen,selection,3653,2775,3653,2881,2324,451,23,20,2015-07-27,2015-01-07,0
+price,frozen,holdout,669,669,669,669,669,0,0,0,,,0
+price,frozen,all,4322,3444,4322,3550,2993,451,23,20,2015-07-27,2015-01-07,0

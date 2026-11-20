@@ -1,0 +1,50 @@
+{
+  "simulation": [
+    "2015-01-01",
+    "2026-10-31"
+  ],
+  "reference_year": 2014,
+  "models": {
+    "demand": "mlp",
+    "price": "hist_gbc"
+  },
+  "days": 4322,
+  "training_years": 3,
+  "budget_per_model_and_strategy": 6,
+  "rolling_days": 28,
+  "persistence_days": 7,
+  "reference_quantile": 0.95,
+  "official_boundary_checks": [
+    "2014-01-01",
+    "2015-01-01",
+    "2016-01-01",
+    "2018-01-01",
+    "2020-01-01",
+    "2022-01-01",
+    "2024-01-01",
+    "2026-01-01",
+    "2026-10-31"
+  ],
+  "archived_frozen_comparison": {
+    "demand": {
+      "max_abs_difference_mw": 1.0913936421275139e-11
+    },
+    "price": {
+      "different_class_predictions": 4,
+      "affected_timestamps": [
+        "2017-02-17 11:30:00",
+        "2019-02-17 16:00:00",
+        "2022-02-17 15:00:00",
+        "2023-02-17 13:30:00"
+      ]
+    }
+  },
+  "platform": "Linux",
+  "versions": {
+    "python": "3.11.18",
+    "sklearn": "1.9.1",
+    "numpy": "2.4.6",
+    "pandas": "3.1.0",
+    "joblib": "1.6.0"
+  }
+}

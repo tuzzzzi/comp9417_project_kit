@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "days_per_task": 4322,
+  "half_hours_per_task": 207456,
+  "checks": [
+    "All predictions use the official market-day calendar and contain valid task outputs",
+    "All rolling statistics and alerts independently replayed with vectorized windows",
+    "Thresholds rebuilt using only complete 2014 windows",
+    "Alert actions, model versions, dates, three-year training windows and six-update limits verified",
+    "All four monthly and annual metrics recomputed and both monthly intervals checked for valid bounds"
+  ]
+}
