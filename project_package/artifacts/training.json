@@ -1,0 +1,50 @@
+{
+  "first_market_day": "2023-11-01",
+  "last_market_day": "2026-10-31",
+  "n_halfhours": 52608,
+  "feature_names": [
+    "syd_temp",
+    "syd_rh",
+    "syd_cloud",
+    "syd_solar",
+    "mel_temp",
+    "mel_rh",
+    "mel_cloud",
+    "mel_solar",
+    "bne_temp",
+    "bne_rh",
+    "bne_cloud",
+    "bne_solar",
+    "slot_sin",
+    "slot_cos",
+    "weekend",
+    "season_sin",
+    "season_cos",
+    "demand_lag1",
+    "price_lag1",
+    "demand_lag7",
+    "price_lag7",
+    "previous_price_mean"
+  ],
+  "released_csv_sha256": "c13711002906140eaf7cc67c1ce17a49facd359cf3d1a84722aaa3ccd647752c",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.0",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "python": "3.11.18",
+  "strategy": "Stage 2 selected periodic retraining; final Stage 3 refit with the same 3-year window length",
+  "fit_warnings": [
+    "Stochastic Optimizer: Maximum iterations (300) reached and the optimization hasn't converged yet."
+  ],
+  "fitted_state_hashes": {
+    "demand": "93d26f22b45d1a9e2eaef54a64d9daa2",
+    "price": "a1cc3bbfa0b2d24713757a1a97901964"
+  },
+  "artifact_sha256": {
+    "demand": "81270841e7cef8867cf271f0c5000a74a49e29361098a88b92c38390ddf4156d",
+    "price": "99ba1fe111026305cb8c9d42f281fd3ad181a11644be450e22a1446587b6b755"
+  }
+}

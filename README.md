@@ -168,3 +168,47 @@ python -m experiments.plot_price_results
 ```
 
 The demand MLP's recorded convergence warning is retained; its 300-epoch selected run must not be described as converged. These are Stage 1 results, not completed 2015–2026 simulations or a final submission package.
+
+## Final dual-task package
+
+The [Moodle submission clarification](https://moodle.telt.unsw.edu.au/mod/forum/discuss.php?d=2821818)
+states that each group submits one model package. `Forecaster.predict` returns both
+`nsw_demand_mw` and `nsw_price_up`; one `train.py` rebuilds both models. Extra helper
+modules beside these files are allowed. `project_package/` uses this structure:
+
+```text
+project_package/
+  model.py       Forecaster: load and predict both tasks
+  train.py       rebuild both fitted models from the fixed CSV
+  features.py    shared training/prediction features
+  demand.py      selected MLP constructor
+  price.py       selected gradient-boosting constructor
+  settings.json selected hyperparameters, versions and final training window
+  artifacts/    both fitted models and their training record
+```
+
+Final training retains the selected algorithms and three-year window length,
+using market days 2023-11-01 through 2026-10-31. This Stage 3 fit is separate from
+historical simulations; their models, dates, predictions and scores are unchanged.
+The final MLP's iteration-limit warning is recorded rather than described as
+convergence. Forecast demand is bounded to the interface's 0–20,000 MW range.
+
+From the kit root, in the pinned Python 3.11 environment:
+
+```bash
+python project_package/train.py data/nem_weather_halfhourly_2010_2026.csv
+python -m experiments.build_submission
+python check_submission.py deliverables/submission.zip
+```
+
+The teacher's 12 November reply says to combine the experiment-code ZIP and model
+ZIP inside one outer ZIP. The 17 November reply clarifies the single dual-task
+interface. Accordingly, `deliverables/code_and_model.zip` contains exactly
+`experiment_code.zip` and `submission.zip`. Submit the group's single report PDF
+separately, following the live Moodle form. No report is created or included in
+these ZIPs. Released data, Python environments and caches are excluded.
+
+The official local wrapper tests the ZIP itself on the last 14 released days.
+Those days are in the final training window: scores check execution and output
+format, and are not a live-week performance estimate. Local checks do not by
+themselves establish Linux sandbox memory/CPU compatibility.

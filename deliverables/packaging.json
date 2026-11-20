@@ -1,0 +1,25 @@
+{
+  "moodle_upload_files": [
+    "code_and_model.zip",
+    "your group report PDF (supplied separately)"
+  ],
+  "outer_zip_contents": [
+    "experiment_code.zip",
+    "submission.zip"
+  ],
+  "report_in_zip": false,
+  "final_artifacts_bytes": 147517,
+  "training_window": [
+    "2023-11-01",
+    "2026-10-31"
+  ],
+  "sources": {
+    "forum": "https://moodle.telt.unsw.edu.au/mod/forum/discuss.php?d=2821818",
+    "readme": "README.md sections 4\u20136"
+  },
+  "sha256": {
+    "submission.zip": "816ae6bc25002b329c7e9eef5e2b76ee9f566d9791d2b591be8bfcd57db0ca32",
+    "experiment_code.zip": "4b9661f93def47e0f6c88d0f7cbcbd4fcb5dd042b4b04dbb670a8cecaeb2473a",
+    "code_and_model.zip": "4730e56c8b78a48518773e67f712a53a99c114818e34eed19cf67e62697ecf09"
+  }
+}

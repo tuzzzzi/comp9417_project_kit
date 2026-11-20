@@ -1,0 +1,24 @@
+{
+  "official_zip_check": "14/14 days passed",
+  "standalone_rebuild": "passed; training metadata, fitted state hashes and serialized artifact hashes exactly equal",
+  "standalone_rebuild_seconds": 15.395548625005176,
+  "fit_window": [
+    "2023-11-01",
+    "2026-10-31"
+  ],
+  "n_training_halfhours": 52608,
+  "fit_warnings": [
+    "Stochastic Optimizer: Maximum iterations (300) reached and the optimization hasn't converged yet."
+  ],
+  "linux_resource_sandbox_tested": false,
+  "local_wrapper_time_and_output_checks": true,
+  "last_14_days_are_in_sample": true,
+  "moodle_uploaded": false,
+  "shared_feature_parity": "passed on equality, leap-day and final-date cases",
+  "no_future_market_leakage": "passed; added target-day market values do not affect predictions",
+  "prediction_calls_preserve_fitted_parameters": true,
+  "repeatability": "passed",
+  "officially_checked_zip_sha256": "816ae6bc25002b329c7e9eef5e2b76ee9f566d9791d2b591be8bfcd57db0ca32",
+  "nested_zip_integrity": "passed",
+  "report_raw_data_environment_and_caches_excluded": true
+}
